@@ -43,7 +43,7 @@ const MainPage = () => {
         setProduct(result.result);
         console.log(result);
       })
-      .catch((err) => {g
+      .catch((err) => {
         console.log(err);
       });
   };
