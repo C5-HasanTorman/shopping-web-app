@@ -17,6 +17,8 @@ app.use("/regester", registerRouter);
 app.use("/login", loginRouter);
 app.use("/product", productRouter);
 
+app.use("*", (req, res) => res.status(404).json("NO content at this path"));
+
 const PORT = 5000 || process.env.PORT;
 app.listen(PORT, () => {
   console.log(`server on ${PORT}`);
