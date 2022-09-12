@@ -139,6 +139,56 @@ const MainPage = () => {
             </header>
             <article className="deal-card">
               <Row className="d-md-flex deal-grid">
+                {product
+                  ? product.map((item, index) => {
+                      <Col
+                        key={index}
+                        md="6"
+                        lg={"3"}
+                        className="col-12 mb-5 product"
+                      >
+                        {" "}
+                        <Card className="deal-gri">
+                          <figure>
+                            <Card.Img
+                              variant="top"
+                              src={item.url}
+                              alt="One-Hour Pool Table Game incl. Two Cans of Soft Drink or Two Heineken 0% "
+                            />
+                            <figcaption>
+                              <p>{item.productName}</p>
+                            </figcaption>
+                          </figure>
+
+                          <Card.Body>
+                            <Card.Title>
+                              <header className="top-card">
+                                <div className="text-cont">
+                                  <p>
+                                    {" "}
+                                    <span className="name-Stores">
+                                      {product.description}
+                                    </span>
+                                  </p>
+                                </div>
+                              </header>
+                            </Card.Title>
+                            <Card.Text>
+                              <footer className="bottom-card">
+                                <div className="text-right">
+                                  <p className="from-word">from</p>
+                                  <div>
+                                    <span className="price"> {item.price}</span>
+                                  </div>
+                                </div>
+                              </footer>
+                            </Card.Text>
+                          </Card.Body>
+                        </Card>
+                      </Col>;
+                    })
+                  : []}
+
                 <Col md="6" lg={"3"} className="col-12 mb-5 product">
                   {" "}
                   <Card className="deal-gri">
@@ -160,7 +210,7 @@ const MainPage = () => {
                     <Card.Body>
                       <Card.Title>
                         <header className="top-card">
-                          <h5 class="card-text">Boutique Dining </h5>
+                          {" "}
                           <div className="text-cont">
                             <p>
                               {" "}
@@ -203,7 +253,7 @@ const MainPage = () => {
                     <Card.Body>
                       <Card.Title>
                         <header className="top-card">
-                          <h5 class="card-text">4-Star CBD Auckland </h5>
+                          {" "}
                           <div className="text-cont">
                             <p>
                               {" "}
@@ -243,7 +293,7 @@ const MainPage = () => {
                     <Card.Body>
                       <Card.Title>
                         <header className="top-card">
-                          <h5 class="card-text">HIFU Treatment Package</h5>
+                          {" "}
                           <div className="text-cont">
                             <p>
                               {" "}
@@ -283,7 +333,7 @@ const MainPage = () => {
                     <Card.Body>
                       <Card.Title>
                         <header className="top-card">
-                          <h5 class="card-text">HIFU Treatment Package</h5>
+                          {" "}
                           <div className="text-cont">
                             <p>
                               {" "}
@@ -324,7 +374,6 @@ const MainPage = () => {
                     <Card.Body>
                       <Card.Title>
                         <header className="top-card">
-                          <h5 class="card-text">HIFU Treatment Package</h5>
                           <div className="text-cont">
                             <p>
                               {" "}
@@ -370,7 +419,7 @@ const MainPage = () => {
                     <Card.Body>
                       <Card.Title>
                         <header className="top-card">
-                          <h5 class="card-text">HIFU Treatment Package</h5>
+                          {" "}
                           <div className="text-cont">
                             <p>
                               {" "}
@@ -411,7 +460,7 @@ const MainPage = () => {
                     <Card.Body>
                       <Card.Title>
                         <header className="top-card">
-                          <h5 class="card-text">HIFU Treatment Package</h5>
+                          {" "}
                           <div className="text-cont">
                             <p>
                               {" "}
@@ -452,7 +501,7 @@ const MainPage = () => {
                     <Card.Body>
                       <Card.Title>
                         <header className="top-card">
-                          <h5 class="card-text">HIFU Treatment Package</h5>
+                          {" "}
                           <div className="text-cont">
                             <p>
                               {" "}
