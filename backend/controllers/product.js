@@ -62,7 +62,7 @@ const getAllProduct = (req, res) => {
 
 // 3. Delete Product
 const deleteProduct = (req, res) => {
-  const {product_id} = req.params;
+  const { product_id } = req.params;
   const query = "UPDATE products SET is_deleted =1 WHERE id= ?";
   const data = [product_id];
 
@@ -89,4 +89,59 @@ const deleteProduct = (req, res) => {
   });
 };
 
-module.exports = { addProduct, getAllProduct ,deleteProduct};
+// 4. Edit Product
+
+const updateProduct = (req, res) => {
+  const { product_id } = req.params;
+  const { product_name, description, price, url } = req.body;
+
+  const query = "SELECT * FROM products WHERE id= ?";
+
+  const data = [product_id];
+
+  connection.query(query, data, (err, result) => {
+    if (err) {
+      return res.status(500).json({
+        success: false,
+        massage: "server error*",
+        err: err,
+      });
+    }
+    if (!result.length) {
+      return res.status(404).json({
+        success: false,
+        massage: `The Product: ${product_id} is not found`,
+        err: err,
+      });
+    } else {
+    }
+
+    const query =
+      "UPDATE products SET product_name=?, description=?, price=?, url=? WHERE id= ?";
+    const data = [
+      product_name || result[0].product_name,
+      description || result[0].description,
+      price || result[0].price,
+      url || result[0].url,
+      product_id,
+    ];
+    connection.query(query, data, (err, responce) => {
+      if (err) {
+        return res.status(500).json({
+          success: false,
+          massage: "server error*",
+          err: err,
+        });
+      }
+      if (responce.affectedRows) {
+        res.status(201).json({
+          success: true,
+          massage: `Product updated`,
+          result,
+        });
+      }
+    });
+  });
+};
+
+module.exports = { addProduct, getAllProduct, deleteProduct, updateProduct };
