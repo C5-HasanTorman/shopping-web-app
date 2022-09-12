@@ -1,0 +1,103 @@
+.deal-con {
+    margin-top: 60px;
+    padding-top: 30px;
+  }
+  .cont {
+    border-top: 1px solid #aaa;
+  }
+  .deal-head {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+
+
+
+
+
+  
+
+
+ 
+
+
+  
+  figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+  }
+  figcaption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  figcaption:hover {
+    background: linear-gradient(rgba(1, 178, 238, 0.9), rgba(1, 178, 238, 0.9));
+  }
+  figcaption p {
+    width: 100%;
+    font-size: 17px;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 0;
+    display: none;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    -webkit-transform: translateY(45px);
+    -ms-transform: translateY(45px);
+    transform: translateY(45px);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  figure:hover p {
+    -webkit-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px);
+    display: block;
+  }
+  
+
+
+  .name-Stores {
+    color: #01b2ee;
+  }
+  .bottom-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #01b2ee;
+  }
+
+  .price {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .from-word {
+    display: flex;
+    justify-content: end;
+    margin: 0;
+    line-height: 2px;
+    font-size: 14px;
+  }
+ 
+
+
+  
+
+
