@@ -1,0 +1,8 @@
+.shadow-lg {
+  border: 1px solid #aaa;
+}
+.img-block {
+  background: url("https://img.freepik.com/free-photo/elegant-white-background-with-blue-wave-lines_1017-32741.jpg?w=1800&t=st=1662960380~exp=1662960980~hmac=25cf498244cfab04a9fa1eab6c89ce5b9290a911e21744adbfc0653376a40d14");
+
+  background-size: contain;
+}
