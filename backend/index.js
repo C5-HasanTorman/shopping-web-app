@@ -15,9 +15,9 @@ app.use(cors());
 
 // router middleware
 app.use("/role", roleRouter);
-app.use("./regester", registerRouter);
-app.use("./login", loginRouter);
-app.use("./product", productRouter);
+app.use("/regester", registerRouter);
+app.use("/login", loginRouter);
+app.use("/product", productRouter);
 
 const PORT = 5000 || process.env.PORT;
 app.listen(PORT, () => {
